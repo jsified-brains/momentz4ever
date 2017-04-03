@@ -1,0 +1,3 @@
+rootProject.name = 'momentz4ever'
+
+include ':app'
