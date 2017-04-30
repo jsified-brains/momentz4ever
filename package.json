@@ -12,18 +12,28 @@
     "react-native": "0.42.3"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.2",
     "@types/react": "^15.0.21",
     "@types/react-dom": "^0.14.23",
     "@types/react-native": "^0.43.0",
-    "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
-    "jest": "19.0.2",
+    "jest": "^19.0.2",
     "react-test-renderer": "~15.4.1",
+    "ts-jest": "^19.0.14",
     "tslint": "^5.0.0",
     "typescript": "^2.2.2",
     "typings": "^2.1.0"
   },
   "jest": {
-    "preset": "react-native"
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "src/.*\\.(test|spec)\\.(ts|tsx)",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ]
   }
 }
