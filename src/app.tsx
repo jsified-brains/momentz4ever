@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header } from './components/common/index';
 import {
     StyleSheet,
     Text,
@@ -7,7 +8,7 @@ import {
     TextStyle
 } from 'react-native';
 
-// src/index.ts
+
 
 interface Props {
 
@@ -21,12 +22,17 @@ export default class App extends Component<Props, State> {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.announceHeader}>
-                   Hello!!! Welcome to React Native!
-                </Text>
-                <Text style={styles.announceDesc}>
-                   Now using Typescript
-                </Text>
+                <View style={styles.appHeader}>
+                    <Header headerText='Momentz-4-ever' ></Header>
+                </View>
+                <View style={styles.appBody}>
+                    <Text style={styles.announceHeader}>
+                    Hello!!! Welcome to React Native!
+                    </Text>
+                    <Text style={styles.announceDesc}>
+                    Now using Typescript
+                    </Text>
+                </View>
             </View>
         );
     }
@@ -51,4 +57,16 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
     } as TextStyle,
+
+    appHeader: {
+        flex:1,
+        flexDirection: 'row' as 'row',
+        justifyContent: 'center' as 'center',
+        alignItems: 'center' as 'center',
+        backgroundColor:'#00e6e6'
+    },
+    appBody: {
+        flex:11,
+        justifyContent: 'center' as 'center'
+    }
 });
