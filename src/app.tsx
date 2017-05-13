@@ -23,11 +23,11 @@ export default class App extends Component<Props, State> {
         return (
             <View style={styles.container}>
                 <View style={styles.appHeader}>
-                    <Header headerText='Momentz-4-ever' ></Header>
+                    <Header headerText="Momentz-4-ever" ></Header>
                 </View>
                 <View style={styles.appBody}>
                     <Text style={styles.announceHeader}>
-                    Hello!!! Welcome to React Native!
+                    Hello!!!!!! Welcome to React Native!!!!
                     </Text>
                     <Text style={styles.announceDesc}>
                     Now using Typescript
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
     announceHeader: {
         fontSize: 20,
         textAlign: 'center',
-        margin: 10,
+        margin: 10
     } as TextStyle,
 
     announceDesc: {
         fontSize: 17,
         textAlign: 'center',
-        margin: 10,
+        margin: 10
     } as TextStyle,
 
     appHeader: {
