@@ -103,7 +103,8 @@
     ],
     "semicolon": [
       true,
-      "always"
+      "always",
+      "ignore-interfaces"
     ],
     "variable-name": [
       true,

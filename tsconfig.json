@@ -21,11 +21,6 @@
         "src/**/*.tsx",
         "node_modules/typescript/lib/lib.es6.d.ts"
     ],
-    "types": [
-        "react",
-        "react-native",
-        "jest"
-    ],
     "exclude":[
         "index.android.js", 
         "index.ios.js", 
