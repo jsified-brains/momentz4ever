@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const albumScreen = () => {
+const HomeScreen = () => {
     const { textStyle, viewStyle } = styles;
 
     return (
@@ -23,4 +23,4 @@ const styles = {
     }
 };
 
-export { headerScreen };
+export { HomeScreen };

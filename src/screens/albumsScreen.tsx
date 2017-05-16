@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const headerScreen = () => {
+const AlbumsScreen = () => {
     const { textStyle, viewStyle } = styles;
 
     return (
         <View style={viewStyle} >
-            <Text style={textStyle}> Header screen </Text>
+            <Text style={textStyle}> Albums screen </Text>
         </View>
     );
 };
@@ -23,4 +23,4 @@ const styles = {
     }
 };
 
-export { headerScreen };
+export { AlbumsScreen };
