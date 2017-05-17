@@ -1,4 +1,4 @@
-import { TabNavigator } from 'react-navigation';
+import { TabNavigator, StackNavigator } from 'react-navigation';
 import { AlbumsScreen, HomeScreen } from '../screens/index';
 
 const Tabs = TabNavigator({
@@ -11,4 +11,14 @@ const Tabs = TabNavigator({
     });
 
 
-export { Tabs };
+
+const StackNav = StackNavigator({
+    HomeScreen: {
+        screen: HomeScreen
+    },
+    AlbumsScreen: {
+        screen: AlbumsScreen
+    }
+});
+
+export { Tabs, StackNav };
