@@ -1,31 +1,41 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { ScrollView } from 'react-native';
+import { AlbumListItem } from '../components/common/index';
 
-const AlbumsScreen = (props:any) => {
-    const { textStyle, viewStyle } = styles;
-    const { navigate } = props.navigation;
+const AlbumsScreen = () => {
+
+    const albums = [{
+        "title": "Album 1.",
+        "id" : "1",
+        "description" : "This is the first album",
+        "imageUrl" : "https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png",
+        "createdDate" : "05/05/2017",
+        "lastViewedOn" : "05/06/2017"
+    },
+        {
+            "title": "Album 2.",
+            "id" : "2",
+            "description" : "This is the second album",
+            "imageUrl" : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
+            "createdDate" : "05/07/2017",
+            "lastViewedOn" : "05/08/2017"
+        }
+
+    ];
+
+    const renderAlbums = () => {
+        return albums.map(album =>
+            <AlbumListItem key={album.id} name={album.title}  description={album.description} imageUrl={album.imageUrl} ></AlbumListItem>
+        );
+    }
 
     return (
-        <View style={viewStyle} >
-            <Text style={textStyle}> Albums screen </Text>
-            <Button
-                onPress={() => navigate('HomeScreen')}
-                title="Go to home Screen"
-            />
-        </View>
+        <ScrollView >
+            { renderAlbums() }
+        </ScrollView>
     );
 };
 
-const styles = {
-    textStyle: {
-        fontSize: 20
-    },
-    viewStyle: {
-        flex: 1,
-        flexDirection: 'row' as 'row',
-        alignItems: 'center' as 'center',
-        justifyContent: 'center' as 'center'
-    }
-};
+
 
 export { AlbumsScreen };
