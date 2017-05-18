@@ -1,31 +1,12 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { AlbumsList } from '../components/albums/index';
 
-const AlbumsScreen = (props:any) => {
-    const { textStyle, viewStyle } = styles;
-    const { navigate } = props.navigation;
+const AlbumsScreen = () => {
 
     return (
-        <View style={viewStyle} >
-            <Text style={textStyle}> Albums screen </Text>
-            <Button
-                onPress={() => navigate('HomeScreen')}
-                title="Go to home Screen"
-            />
-        </View>
-    );
-};
 
-const styles = {
-    textStyle: {
-        fontSize: 20
-    },
-    viewStyle: {
-        flex: 1,
-        flexDirection: 'row' as 'row',
-        alignItems: 'center' as 'center',
-        justifyContent: 'center' as 'center'
-    }
+        <AlbumsList></AlbumsList>
+    );
 };
 
 export { AlbumsScreen };
